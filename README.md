@@ -1,130 +1,207 @@
-```markdown
-# 💪 Push-UP
+# Push-UP
+
+[![Version](https://img.shields.io/badge/version-1.0.0-blue?style=for-the-badge)](https://github.com/usuario/Push-UP/releases/tag/v1.0.0)
+[![Issues](https://img.shields.io/github/issues/usuario/Push-UP?style=for-the-badge&color=orange)](https://github.com/usuario/Push-UP/issues)
+[![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
+[![Language](https://img.shields.io/github/languages/top/usuario/Push-UP?style=for-the-badge&color=yellow)](https://github.com/usuario/Push-UP)
+[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellowgreen?style=for-the-badge)](#)
 
 ---
 
-## 🚀 Sobre o Projeto
+## 📖 Descrição do Projeto
 
-O **Push-UP** é uma aplicação inovadora desenvolvida para auxiliar usuários a acompanhar, registrar e melhorar o desempenho em exercícios físicos, especialmente focado em flexões (push-ups). Com uma interface amigável e funcionalidades inteligentes, o Push-UP visa incentivar a prática regular de atividades físicas, promovendo saúde e bem-estar.
+O **Push-UP** é uma aplicação inovadora voltada para o monitoramento, registro e aprimoramento do desempenho em exercícios físicos, com foco principal em flexões (push-ups). Desenvolvido para atender tanto praticantes casuais quanto atletas e treinadores, o sistema propõe uma solução digital acessível que facilita a prática regular de atividades físicas através de funcionalidades inteligentes e uma interface intuitiva.
 
-Este projeto é ideal para entusiastas de fitness, treinadores e desenvolvedores que buscam uma solução simples e eficaz para monitoramento de exercícios, com potencial para expansão para outras modalidades físicas.
+A aplicação resolve o problema comum da falta de acompanhamento personalizado e registro eficiente dos exercícios, incentivando o usuário com feedbacks progressivos que potencializam o desenvolvimento físico e a saúde. O Push-UP apresenta um diferencial técnico ao oferecer um sistema modular e escalável, com possibilidade de futura ampliação para outras modalidades de treino e integração com dispositivos de monitoramento.
 
+---
+
+## ⚙️ Funcionalidades
+
+- **Cadastro e autenticação de usuários:** Controle seguro de acesso para múltiplos perfis.
+- **Registro de sessões de flexões:** Inserção e edição detalhada de séries, repetições, tempo, e data.
+- **Acompanhamento histórico:** Visualização gráfica do progresso pessoal ao longo do tempo.
+- **Definição de metas personalizadas:** Configuração de objetivos semanais e mensais.
+- **Feedback automático:** Alertas e recomendações baseadas no desempenho registrado.
+- **Interface responsiva:** Otimizada para dispositivos móveis e desktops.
+- **Exportação de dados:** Baixa de relatórios em formatos padrões para análise externa.
+  
 ---
 
 ## 🛠 Tecnologias Utilizadas
 
-| Tecnologia           | Badge                            |
-|---------------------|---------------------------------|
-| React               | ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) |
-| Node.js             | ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) |
-| Express.js          | ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) |
-| MongoDB             | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white) |
-| Docker              | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) |
-| Jest                | ![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white) |
+| Tecnologia             | Tipo                          | Detalhes                                                    |
+|-----------------------|------------------------------|-------------------------------------------------------------|
+| React                 | Framework Front-end           | Construção da interface do usuário responsiva               |
+| Node.js               | Plataforma Back-end           | Servidor e API RESTful                                       |
+| Express.js            | Framework Node.js             | Roteamento e middleware para API                            |
+| MongoDB               | Banco de Dados NoSQL          | Armazenamento dos dados do usuário e exercícios             |
+| JWT                   | Autenticação                  | Gerenciamento seguro de tokens para autenticação             |
+| Chart.js              | Biblioteca Front-end          | Gráficos para visualização do progresso                      |
+| Docker                | Contêinerização               | Facilita o deploy e ambiente isolado                          |
 
 ---
 
-## ⚙️ Funcionalidades Principais
+## 📁 Estrutura de Diretórios
 
-- Registro e monitoramento de séries e repetições de flexões.
-- Gráficos de desempenho ao longo do tempo para acompanhamento visual.
-- Configuração de metas personalizadas de treino.
-- Feedback instantâneo sobre progresso e sugestões de melhoria.
-- Autenticação segura para múltiplos usuários.
-- Interface responsiva para qualquer dispositivo.
-- Histórico completo de treinos com filtros inteligentes.
-
----
-
-## 📁 Estrutura de Pastas
-
-```plaintext
-/
-├── backend/            # Código do servidor e APIs
-│   ├── controllers/    # Controle da lógica das rotas
-│   ├── models/         # Modelos de dados (MongoDB)
-│   ├── routes/         # Definição das rotas da API
-│   └── services/       # Serviços auxiliares e integrações
-├── frontend/           # Aplicação cliente React
-│   ├── components/     # Componentes reutilizáveis da UI
-│   ├── pages/          # Páginas da aplicação
-│   ├── styles/         # Estilos CSS/SCSS
-│   └── utils/          # Funções utilitárias e hooks
-├── docker/             # Configurações dos containers Docker
-├── tests/              # Testes unitários e integrados
-├── .env.example        # Exemplo de variáveis de ambiente
-├── README.md           # Documentação do projeto
-└── package.json        # Gerenciador de pacotes e dependências
+```
+/Push-UP
+├── README.md                 # Documentação detalhada do projeto
+├── /client                   # Código fonte da interface React
+│   ├── /components           # Componentes reutilizáveis da UI
+│   ├── /pages                # Páginas da aplicação
+│   ├── /services             # Serviços para consumo da API
+│   └── /assets               # Imagens e estilos
+├── /server                   # Aplicação backend Node.js/Express
+│   ├── /controllers          # Lógica de negócios e controle de rotas
+│   ├── /models               # Definições de schema do MongoDB
+│   ├── /routes               # Definição das rotas da API REST
+│   ├── /middlewares          # Middleware para autenticação, logs, etc.
+│   ├── /config               # Configurações gerais e variáveis de ambiente
+│   └── /utils                # Utilitários e helpers
+├── Dockerfile                # Configuração para criação da imagem Docker
+└── docker-compose.yml        # Orquestração de contêineres (app+db)
 ```
 
 ---
 
-## 🚀 Como Executar o Projeto
+## 🖥 Instalação e Execução
 
 ### Pré-requisitos
 
-- Node.js >= 14.x
-- Docker (opcional, para ambiente containerizado)
-- MongoDB (local ou via Docker)
+- Node.js v16+
+- npm ou yarn
+- MongoDB (local ou remoto)
+- Docker e Docker Compose (opcional para deploy simplificado)
 
-### Passos para rodar localmente
+### Passos
 
 1. Clone o repositório:
-
    ```bash
-   git clone https://github.com/H-Saimon/Push-UP.git
+   git clone https://github.com/usuario/Push-UP.git
    cd Push-UP
    ```
 
-2. Configure as variáveis de ambiente:
-
-   Crie um arquivo `.env` na raiz do backend com base no `.env.example` e preencha as variáveis necessárias (ex: conexão com banco).
-
-3. Instale as dependências do backend e frontend:
-
+2. Instale as dependências backend:
    ```bash
-   cd backend
-   npm install
-
-   cd ../frontend
+   cd server
    npm install
    ```
 
-4. Rode o servidor backend:
+3. Configure as variáveis de ambiente:
+   - Renomeie `.env.example` para `.env` e ajuste as variáveis como `MONGO_URI`, `JWT_SECRET` e `PORT`.
 
+4. Instale as dependências frontend:
    ```bash
-   cd ../backend
+   cd ../client
+   npm install
+   ```
+
+5. Inicialize o servidor backend:
+   ```bash
    npm run dev
    ```
 
-5. Em outra aba/terminal, rode o frontend:
-
+6. Inicialize o cliente React:
    ```bash
-   cd ../frontend
    npm start
    ```
 
-6. Acesse a aplicação no navegador:  
-   `http://localhost:3000`
-
-### Instruções com Docker (opcional)
-
-Utilize o Docker Compose para subir toda a aplicação e banco de dados de forma rápida:
-
-```bash
-docker-compose up --build
-```
+A aplicação estará acessível via `http://localhost:3000`.
 
 ---
 
-## 👨‍💻 Autor
+## 🌐 Endpoints da API
 
-| [![Hítalon Saimon](https://avatars.githubusercontent.com/u/00000000?v=4&s=100)](https://github.com/H-Saimon) |
-| ------------------------------------------------------------------------------------------------------- |
-|                          **Hítalon Saimon** - Desenvolvedor Sênior                                     |
+| Método  | Endpoint              | Descrição                                      |
+|---------|-----------------------|-----------------------------------------------|
+| POST    | /api/auth/register    | Registrar novo usuário                         |
+| POST    | /api/auth/login       | Autenticar usuário e obter token JWT          |
+| GET     | /api/users/profile    | Obter dados do perfil autenticado              |
+| POST    | /api/exercises        | Criar novo registro de exercício (flexões)    |
+| GET     | /api/exercises        | Listar registros do usuário                     |
+| PUT     | /api/exercises/:id    | Atualizar registro específico                   |
+| DELETE  | /api/exercises/:id    | Remover registro                                |
+| GET     | /api/progress         | Obter dados agregados para gráficos de progresso |
 
 ---
 
-Made with ❤️ por Hítalon Saimon  
-Entre em contato: [github.com/H-Saimon](https://github.com/H-Saimon)
-```
+## 🔍 Testes
+
+Atualmente o projeto inclui testes automatizados no backend com **Jest** e **Supertest**:
+
+- Para executar os testes:
+  ```bash
+  cd server
+  npm test
+  ```
+
+- Cobertura de testes inclui: validação de rotas, autenticação, CRUD de exercícios e middleware.
+
+- Estratégia: testes unitários para controllers e integração para rotas REST.
+
+---
+
+## ☁️ Deploy
+
+### Deploy com Docker
+
+1. Construir imagem Docker:
+   ```bash
+   docker-compose build
+   ```
+
+2. Subir serviços:
+   ```bash
+   docker-compose up -d
+   ```
+
+3. Acesse a aplicação via `http://localhost:3000`.
+
+### Deploy em Nuvem
+
+A aplicação pode ser facilmente publicada em plataformas como Heroku, AWS Elastic Beanstalk, ou DigitalOcean, utilizando a imagem Docker ou implantação direta do Node.js com banco MongoDB conectado remotamente.
+
+---
+
+## 🔐 Segurança
+
+- **Autenticação JWT:** Todas as rotas que manipulam dados do usuário são protegidas por token JWT.
+- **Validação de dados:** Inputs validados no backend usando middleware para prevenir dados inválidos e ataques de injeção.
+- **CORS configurado:** Controla acessos externos à API garantindo comunicação segura.
+- **Protocolos HTTPS:** Recomendado para produção, garantindo a criptografia do tráfego.
+  
+---
+
+## 🚀 Melhorias Futuras
+
+- Implementar integração com dispositivos wearables para monitoramento em tempo real.
+- Adicionar suporte para outras modalidades de exercícios físicos (abdominais, agachamentos, etc).
+- Incluir recursos avançados de análise e inteligência artificial para planos de treino personalizados.
+- Suporte multi-idiomas para alcance global.
+- Implementar notificações push para lembretes e motivação diária.
+- Criar versão mobile nativa para iOS e Android.
+
+---
+
+## 🤝 Contribuição
+
+Contribuições são muito bem-vindas! Para colaborar, siga os passos abaixo:
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-funcionalidade`)
+3. Commit suas alterações (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Push para sua branch (`git push origin feature/nova-funcionalidade`)
+5. Abra um Pull Request explicando as alterações realizadas
+
+Por favor, siga o padrão de código existente e escreva testes para novas funcionalidades quando aplicável.
+
+---
+
+## ⚖️ Licença
+
+Este projeto está licenciado sob a licença **MIT** - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+---
+
+_Desenvolvido com 💪 para incentivar saúde e bem-estar através da tecnologia._
